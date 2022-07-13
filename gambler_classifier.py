@@ -21,11 +21,11 @@ def main():
             st.success('Category 0')
         elif result == 1:
             st.success('Category 1')
-        elif result == 1:
+        elif result == 2:
             st.success('Category 2')
-        elif result == 1:
+        elif result == 3:
             st.success('Category 3')
-        elif result == 1:
+        elif result == 4:
             st.success('Category 4')
         else:
             st.success('Category 5')
