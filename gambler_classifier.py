@@ -21,7 +21,7 @@ def main():
     
     #This code cathes the float division by zero which creates ZeroDivisionError
     try:
-        wlr = (float(b)+float(wd))/float(d)
+        wlr = (float(b)+float(wd))/float(d) #Win/Loss ratio calculator.
     except ZeroDivisionError:
         wlr = 0
 
