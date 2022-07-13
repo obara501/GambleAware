@@ -1,0 +1,17 @@
+To run on windows VS Code:
+
+1. Create a virtual environment in the terminal
+
+   python -m venv my_env
+   
+2. Activate th eenvironment. 
+
+   .my_env\Scripts\activate
+   
+3. Install requirements in requirements.txt
+
+    pip install -r requirements.txt
+    
+4. Deactivate virtual environment after running. 
+
+    deactivate
