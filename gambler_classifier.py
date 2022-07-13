@@ -1,3 +1,4 @@
+from __future__ import division
 import pickle
 import streamlit as st
 from sklearn.tree import DecisionTreeClassifier
@@ -6,15 +7,24 @@ with open('gambler_classifier.pickle','rb') as f:
     clf = pickle.load(f)
 
 def main():
+    
     st.title('Gambling Disorder Predictor')
 
+    b = st.number_input("Current Account Balance")
+    d = st.number_input("Total funds deposited")
+    wd = st.number_input("Total funds withdrawn")
     t = st.number_input("Hours Played")
-    w = st.number_input("Win/Loss Ratio")
-    n = st.number_input("Number of Deposits")
+    
+    try:
+        wlr = (float(b)+float(wd))/float(d)
+    except ZeroDivisionError:
+        wlr = 0
+
+    n = st.number_input("Number of Deposits Made")
 
     if st.button('Predict'):
 
-        result = clf.predict([[t,w,n]])
+        result = clf.predict([[t,wlr,n]])
 
         if result == 0:
             st.success('You were placed in Category 0: Your behaviour does not seem to be destructive.')
