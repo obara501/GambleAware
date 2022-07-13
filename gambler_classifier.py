@@ -6,6 +6,7 @@ with open('gambler_classifier.pickle','rb') as f:
     clf = pickle.load(f)
 
 def main():
+    
     st.title('Gambler Classifier')
 
     t = st.number_input("Hours Played")
@@ -13,8 +14,21 @@ def main():
     n = st.number_input("Number of Deposits")
 
     if st.button('Predict'):
+        
         result = clf.predict([[t,w,n]])
-        st.success(result)
+
+        if result == 0:
+            st.success('Category 0')
+        elif result == 1:
+            st.success('Category 1')
+        elif result == 1:
+            st.success('Category 2')
+        elif result == 1:
+            st.success('Category 3')
+        elif result == 1:
+            st.success('Category 4')
+        else:
+            st.success('Category 5')
 
 if __name__=='__main__':
     main()
