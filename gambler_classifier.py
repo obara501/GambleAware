@@ -1,33 +1,39 @@
-from __future__ import division
-import pickle  #pickle module reads the pickle file with the model.
-import streamlit as st #streamlit
-from sklearn.tree import DecisionTreeClassifier
+#Import division module to deal with ZeroDivisionError. 
+from __future__ import division 
+#Import module to read the pickle file of the model.
+import pickle 
+#Import streamlit 
+import streamlit as st 
+#Import decision tree classifier
+from sklearn.tree import DecisionTreeClassifier .
 
-#Snippet opens the .pickle file and 
+#Open and load the pickle file.
 with open('gambler_classifier.pickle','rb') as f:
     clf = pickle.load(f)
     
 
 def main():
+    #Display title for the web app.
+    st.title('Gambling Disorder Predictor')
     
-    st.title('Gambling Disorder Predictor')#Displays as title for your  web app
-    
-    #User inputs features for the model. 
+    #User input features for the model. 
     b = st.number_input("Current Account Balance")
     d = st.number_input("Total funds deposited")
     wd = st.number_input("Total funds withdrawn")
     t = st.number_input("Hours Played")
     n = st.number_input("Number of Deposits Made")
     
-    #This code cathes the float division by zero which creates ZeroDivisionError
+    #Catch float division by zero which creates ZeroDivisionError
     try:
-        wlr = (float(b)+float(wd))/float(d) #Win/Loss ratio calculator.
+        #Calculate Win/Loss ratio(wlr).
+        wlr = (float(b)+float(wd))/float(d) 
     except ZeroDivisionError:
         wlr = 0
+    #Predict and display predictions.
+    if st.button('Predict'):  
 
-    if st.button('Predict'): #Button to predict and display predictions. 
-
-        result = clf.predict([[t,wlr,n]]) #Returns gambler categories from 0 to 5
+        #Returns gambler categories from 0 to 5
+        result = clf.predict([[t,wlr,n]]) 
 
         if result == 0:
             st.success('You were placed in Category 0: Your behaviour does not seem to be destructive.')
@@ -42,6 +48,5 @@ def main():
         else:
             st.success('You were placed in Category 5: You are at the highest risk of developig GD.\nWe suggest you stop gambling immediately. Ask people around you to help you curb your urges and seek professional assistance.')
         
-
 if __name__=='__main__':
     main()
