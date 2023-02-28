@@ -5,7 +5,7 @@ import pickle
 #Import streamlit 
 import streamlit as st 
 #Import decision tree classifier
-from sklearn.tree import DecisionTreeClassifier .
+from sklearn.tree import DecisionTreeClassifier 
 
 #Open and load the pickle file.
 with open('gambler_classifier.pickle','rb') as f:
