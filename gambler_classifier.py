@@ -4,17 +4,19 @@ from __future__ import division
 import pickle 
 #Import streamlit 
 import streamlit as st 
-#Import decision tree classifier
-from sklearn.tree import DecisionTreeClassifier 
 
-#Open and load the pickle file.
-with open('gambler_classifier.pickle','rb') as f:
+#Open and load pickle file.
+with open('gambler_classify.pickle','rb') as f:
     clf = pickle.load(f)
     
 
 def main():
     #Display title for the web app.
-    st.title('Gambling Disorder Predictor')
+    st.title('Gamble-Aware')
+    st.text('Gamble Aware is a standardised measure of risk behaviour in problem gambling. \nIt is a tool based on research on the common signs and consequences of \nproblematic gambling. Assessing where you or a family member is can help them \nmake informed decisions on how to assist them')
+    st.header('How it works')
+    st.text('Fill in the form below to self-assess your gambling behaviour over \nthe past 24 hours.The response options attract the following scores.\n\nCategory 0 - Your behaviour does not seem to be destructive.\nCategory 1 - Low chance of developing GD\nCategory 2 - Low to mediate risk of developing GD\nCategory 3 - Mediate to high risk of developing GD\nCategory 4 - High risk scale of developing GD\nCategory 5 - Highest risk of developig GD\n\n*GD - Gambling Disorder\n')
+    st.header('Self-assesment form.\n\n')
     
     #User input features for the model. 
     b = st.number_input("Current Account Balance")
