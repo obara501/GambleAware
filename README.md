@@ -1,4 +1,4 @@
-# GambleAware
+## GambleAware
 
 The GambleAWare respository holds a model that is trained to predict online sports gamblers
 likelihood to develop Gambling Addiction. 

@@ -4,7 +4,7 @@ To run on windows VS Code:
 
    python -m venv my_env
    
-2. Activate th eenvironment. 
+2. Activate the environment. 
 
    .my_env\Scripts\activate
    
