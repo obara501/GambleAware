@@ -1,8 +1,39 @@
-## GambleAware
 
-The GambleAWare respository holds a model that is trained to predict online sports gamblers
-likelihood to develop Gambling Addiction. 
-The model takes user inputs from user and runs a Decision Tree to classify the gambler.
-Gambler are classified into 5 categories. 0 being least likely to develop Gambling Disorder(GD)
-and 5 being the most likely to develop GD.
-The apps runs on streamlit, a python library that runs a web app on your browser locahost for users to interact with the model. 
+# Gamble Aware
+
+Gamble Aware is a standardised measure of predicting risk behaviour in problem gambling
+
+
+## Authors
+
+- [@Geofrey Obara](https://www.github.com/obara501)
+
+
+## Contributing
+
+Contributions are always welcome!
+
+Please adhere to this project's `code of conduct`.
+
+
+## Deployment
+
+To deploy this project, creae a python environment the run the following commands. 
+
+```bash
+   pip install -r requirements.txt
+```
+```bash
+   streamlit run gambler_classifier.py
+```
+
+## Screenshots
+
+<img src="/images/StreamLit UI.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+
+
+
+
+## Ligit cense
+
+[MIT](https://choosealicense.com/licenses/mit/)
