@@ -31,9 +31,3 @@ To deploy this project, creae a python environment the run the following command
 
 <img src="/images/StreamLit UI.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
-
-
-
-## Ligit cense
-
-[MIT](https://choosealicense.com/licenses/mit/)
