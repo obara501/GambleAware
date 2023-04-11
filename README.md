@@ -28,6 +28,8 @@ To deploy this project, creae a python environment the run the following command
 ```
 
 ## Screenshots
+<div align="center">
+  <img src="/images/StreamLit UI.png" alt="MarineGEO circle logo" width="500%" height="300%"/>
+</div>
 
-<img src="/images/StreamLit UI.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
